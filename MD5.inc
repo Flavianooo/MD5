@@ -2,7 +2,7 @@
  *                                                                                                  *
  *                                          )(   MD5   )(                                           *
  *                                                                                                  *
- * Copyright © 2019 Ron Rivest. All rights reserved.                                                *
+ * Copyright Â© 2019 Ron Rivest. All rights reserved.                                                *
  * Contributors: Colin Plumb, Y_Less, Abyss Morgan                                                  *
  *                                                                                                  *
  * Website:  adm.ct8.pl                                                                             *
@@ -39,7 +39,7 @@ enum MD5::Enum {
 
 #define MD5_Step(%1,%2,%3,%4,%5,%6,%7)	%2 += %1(%3, %4, %5) + %6, %2 = %2 << %7 | %2 >>> (32 - %7), %2 += %3
 
-stock MD5::Hash(str[]){
+stock MD5::Hash(const str[]){
 	new md5Data[MD5::Enum], done, digest[34], len = strlen(str);
 	MD5::Init(md5Data);
 	len -= 64;
